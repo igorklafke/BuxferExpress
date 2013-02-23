@@ -39,7 +39,16 @@ namespace BuxferExpress
                     dateTransaction.Value,
                     comboAccounts.Text);
 
-                MessageBox.Show("Transaction added");
+                if (MessageBox.Show("Transaction added. Add another one?", "Buxfer Express", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    this.textDescription.Clear();
+                    this.textAmount.Clear();
+                    this.textDescription.Focus();
+                }
+                else
+                {
+                    this.Close();
+                }
             }
         }
 
