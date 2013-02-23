@@ -14,6 +14,9 @@ namespace BuxferExpress
         [STAThread]
         static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
             Buxfer api = new Buxfer();
 
             bool logged = false;
@@ -32,9 +35,6 @@ namespace BuxferExpress
                 formLogin.ShowDialog();
             }
 
-            //run the add transaction form
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormAddTransaction(api));
 
         }
