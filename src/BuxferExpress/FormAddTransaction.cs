@@ -91,7 +91,7 @@ namespace BuxferExpress
                 dateTransaction.Value = nextDueDate;
 
                 //add the current day and month to the transaction description
-                textDescription.Text = DateTime.Today.Day.ToString() + "/" + DateTime.Today.Month.ToString() + " " + textDescription.Text;
+                textDescription.Text = DateTime.Today.Day.ToString("00") + "/" + DateTime.Today.Month.ToString("00") + " " + textDescription.Text;
             }
             else
                 dateTransaction.Value = DateTime.Today;
